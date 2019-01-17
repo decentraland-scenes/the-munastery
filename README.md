@@ -31,4 +31,4 @@ To launch a preview of the scene on your local machine, do the following:
 
 ## Copyright info
 
-This scene is protected with a standard Apache 2 licence. See the terms and conditions in the [LICENCE](/LICENCE) file.
+This scene is protected with a standard Apache 2 licence. See the terms and conditions in the [LICENSE](/LICENSE) file.
