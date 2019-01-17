@@ -1,0 +1,45 @@
+{
+  "display": {
+    "title": "interactive-text",
+    "favicon": "favicon_asset"
+  },
+  "contact": {
+    "name": "king of the bongo",
+    "email": ""
+  },
+  "owner": "",
+  "scene": {
+    "parcels": [
+      "-11,-12",
+      "-11,-13",
+      "-11,-14",
+      "-11,-15",
+      "-10,-12",
+      "-10,-13",
+      "-10,-14",
+      "-10,-15",
+      "-9,-12",
+      "-9,-13",
+      "-9,-14",
+      "-9,-15",
+      "-8,-12",
+      "-8,-13",
+      "-8,-14",
+      "-8,-15"
+    ],
+    "base": "-9,-13"
+  },
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://signalling-01.decentraland.org"
+  },
+  "policy": {
+    "contentRating": "E",
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": [],
+    "teleportPosition": ""
+  },
+  "main": "bin/game.js",
+  "tags": []
+}
