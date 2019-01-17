@@ -38,7 +38,7 @@
     "fly": true,
     "voiceEnabled": true,
     "blacklist": [],
-    "teleportPosition": ""
+    "teleportPosition": "[-13, -14]"
   },
   "main": "bin/game.js",
   "tags": []

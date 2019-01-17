@@ -4,7 +4,7 @@ A simple static scene that just displays 3D models. The 3D models include animat
 
 ![](screenshot/screenshot.png)
 
-[Explore the scene](https://the-munastery-lwbodqmcwg.now.sh): this link takes you to a copy of the scene deployed to a remote server where you can interact with it just as if you were running `dcl start` locally.
+[Explore the scene](https://the-munastery-lwbodqmcwg.now.sh/?position=-13%2C-14): this link takes you to a copy of the scene deployed to a remote server where you can interact with it just as if you were running `dcl start` locally.
 
 **Install the CLI**
 
