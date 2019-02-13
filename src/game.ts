@@ -1,45 +1,46 @@
-function addGLTF(path: string, clip?: string, yRotation?: number) {
-  const base = new Entity()
+function AddGLTF(path: string, position: Vector3, rotation: Vector3, scale?: Vector3, clip?: string) {
+  let entity = new Entity();
 
-  const baseGLTF = new GLTFShape(path)
-  base.set(baseGLTF)
-  
-  let baseTransform = new Transform()
-  baseTransform.position.x = 0
-  baseTransform.position.y = 0
-  baseTransform.position.z = 0
-  baseTransform.rotate(Vector3.Up(), yRotation == null? yRotation: 90)
-  base.set(baseTransform)
+  let shape = new GLTFShape(path);
+  entity.set(shape);
 
-  if(clip) {
-    const waterClip = new AnimationClip(clip)
-    baseGLTF.addClip(waterClip)
-    waterClip.play()
+  let transform = new Transform();
+  transform.position = position;
+  transform.rotation = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
+  if (scale){
+    transform.scale = scale;
   }
-  
-  engine.addEntity(base)
+  else{
+    transform.scale = Vector3.One();
+  }
+  entity.set(transform);
 
-  return baseGLTF
+  if (clip){
+    let animation = new AnimationClip(clip);
+    shape.addClip(animation);
+    animation.play();
+  }
+
+  engine.addEntity(entity);
 }
 
-addGLTF("models/Base.gltf", null, 270)
-addGLTF("models/Tree1.gltf", "Armature_Idle", 270)
-addGLTF("models/Tree2.gltf", "Armature_Idle", 270)
-addGLTF("models/Tree3.gltf", "Armature_Idle", 270 )
-addGLTF("models/Tree4.gltf", "Armature_Idle", 270)
-addGLTF("models/Tree5.gltf", "Armature_Idle", 270)
-addGLTF("models/Water.gltf")
-addGLTF("models/WaterFountain.gltf")
-addGLTF("models/Fire.gltf", "FireBig_Idle")
-addGLTF("models/B1.gltf", "Armature_Idle")
-addGLTF("models/B2.gltf", "Armature_Idle")
-addGLTF("models/B3.gltf", "Armature_Idle")
-addGLTF("models/B4.gltf", "Armature_Idle")
-addGLTF("models/B5.gltf", "Armature_Idle")
-addGLTF("models/B6.gltf", "Armature_Idle")
-addGLTF("models/B7.gltf", "Armature_Idle")
-addGLTF("models/B8.gltf", "Armature_Idle")
-addGLTF("models/B9.gltf", "Armature_Idle")
-addGLTF("models/Ground.gltf", null, 0)
-
-addGLTF("models/Colliders.gltf", null, 90)
+AddGLTF("models/Base.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One());
+AddGLTF("models/Tree1.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Tree2.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Tree3.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Tree4.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Tree5.gltf", new Vector3(0, 0, 0), new Vector3(0, 270, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Water.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One());
+AddGLTF("models/WaterFountain.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One());
+AddGLTF("models/Fire.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "FireBig_Idle");
+AddGLTF("models/B1.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B2.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B3.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B4.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B5.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B6.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B7.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B8.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/B9.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One(), "Armature_Idle");
+AddGLTF("models/Colliders.gltf", new Vector3(0, 0, 0), new Vector3(0, 90, 0), Vector3.One());
+AddGLTF("models/Ground.gltf", new Vector3(0, 0, 0), new Vector3(0, 0, 0), Vector3.One());
