@@ -2,7 +2,7 @@ function AddGLTF(path: string, position: Vector3, rotation: Vector3, scale?: Vec
   let entity = new Entity();
 
   let shape = new GLTFShape(path);
-  entity.set(shape);
+  entity.addComponent(shape);
 
   let transform = new Transform();
   transform.position = position;
@@ -13,11 +13,13 @@ function AddGLTF(path: string, position: Vector3, rotation: Vector3, scale?: Vec
   else{
     transform.scale = Vector3.One();
   }
-  entity.set(transform);
+  entity.addComponent(transform);
 
   if (clip){
+    const animator = new Animator();
     let animation = new AnimationClip(clip);
-    shape.addClip(animation);
+    animator.addClip(animation);
+    entity.addComponent(animator);
     animation.play();
   }
 
