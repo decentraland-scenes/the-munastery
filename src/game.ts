@@ -17,7 +17,7 @@ function AddGLTF(path: string, position: Vector3, rotation: Vector3, scale?: Vec
 
   if (clip){
     const animator = new Animator();
-    let animation = new AnimationClip(clip);
+    let animation = new AnimationState(clip);
     animator.addClip(animation);
     entity.addComponent(animator);
     animation.play();
