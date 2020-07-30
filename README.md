@@ -4,30 +4,33 @@ A simple static scene that just displays 3D models. The 3D models include animat
 
 ![](screenshot/screenshot.png)
 
-[Explore the scene](https://the-munastery-ggtyhuetbt.now.sh): this link takes you to a copy of the scene deployed to a remote server where you can interact with it just as if you were running `dcl start` locally.
+This scene shows you:
+- How to add 3D models to a scene
+- How to add multiple parcels to a scene
+ 
+## Try it out
 
 **Install the CLI**
 
-Download and install the Decentraland CLI by running the following command
+Download and install the Decentraland CLI by running the following command:
 
 ```bash
 npm i -g decentraland
 ```
 
-For a more details, follow the steps in the [Installation guide](https://docs.decentraland.org/documentation/installation-guide/).
+**Previewing the scene**
 
-## Peview the scene
+Download this example and navigate to its directory, then run:
 
-To launch a preview of the scene on your local machine, do the following:
+```
+$:  dcl start
+```
 
-1) Download the repository
-2) Navigate to the scene's folder
-3) Run the following command:
+Any dependencies are installed and then the CLI opens the scene in a new browser tab.
 
-  ```
-  dcl start
-  ```
-  The CLI will install the necessary dependencies and launch the scene in a new browser tab.
+Learn more about how to build your own scenes in our [documentation](https://docs.decentraland.org/) site.
+
+If something doesn’t work, please [file an issue](https://github.com/decentraland-scenes/Awesome-Repository/issues/new).
 
 ## Copyright info
 
